@@ -55,6 +55,7 @@ Certain bits were removed for brevity, see start.sh for the full thing.
  * `-e HAPROXY_PIDS` passes all running haproxy instance PIDs into the running
    container, ultimately to be passed to `haproxy -sf <pids>*`. If less control is
    desired, then this could become `$(pidof haproxy)` in the image's CMD.
+   Coincidentally, this makes it possible to run on OS X using `docker-machine`.
 
 [0]: http://developers.redhat.com/blog/2014/11/06/introducing-a-super-privileged-container-concept/
 
