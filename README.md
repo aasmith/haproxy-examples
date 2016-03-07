@@ -2,7 +2,7 @@
 # haproxy-examples
 
 This repo contains a few examples of haproxy usage that are lesser-known. To try them
-out, see `start.sh` and `haproxy.cfg`.
+out, see [`start.sh`](start.sh) and [`haproxy.cfg`](haproxy.cfg).
 
 They have been tested on a machine running CentOS 7.2, and Docker 1.10.2.
 
