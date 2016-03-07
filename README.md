@@ -160,6 +160,13 @@ curl -vv "http://localhost:8000/"
 Load the stats page and watch during a zero-downtime restart. The made-up app build
 number should change. Load http://localhost:8181 for the main stats.
 
+### Visual Demo
+
+Pictures > words. This video shows a cutover between containers happen twice.
+
+[![](http://img.youtube.com/vi/9RroE8Q69bc/0.jpg)](http://www.youtube.com/watch?v=9RroE8Q69bc)
+
+
 ### Cleaning up
 
 See lots of dead containers with `docker ps -a`. Clean them up with
