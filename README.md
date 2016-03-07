@@ -135,6 +135,36 @@ Since 1.6, haproxy can interpolate environment variables into almost anywhere in
 configuration file. The example haproxy.cfg in this repo allows the user to specify
 a custom backend server, as well as a custom string to appear on the stats page.
 
+## Demo
+
+Run `start.sh`. You should now have haproxy running on many ports.
+
+Get a gzip'd response over SSL:
+
+```
+curl -vv -k -H "Accept-Encoding: gzip" "https://localhost:8443/" | gzip -d
+```
+
+Just gzip:
+
+```
+curl -vv -H "Accept-Encoding: gzip" "http://localhost:8000/" | gzip -d
+```
+
+No gzip:
+
+```
+curl -vv "http://localhost:8000/"
+```
+
+Load the stats page and watch during a zero-downtime restart. The made-up app build
+number should change. Load http://localhost:8181 for the main stats.
+
+### Cleaning up
+
+See lots of dead containers with `docker ps -a`. Clean them up with
+`docker rm $(docker ps -aq)`.
+
 ## Other Bits
 
 ### Certs
